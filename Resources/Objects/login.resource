@@ -37,6 +37,7 @@ valido os elementos do formulário Customer Service - Contact US
     page should contain element              css=#uniform-id_contact    
     page should contain element              css=#center_column > form > fieldset > div.clearfix > div.col-xs-12.col-md-9 > div > label
     page should contain element              css=#message
+    input text                               css=#message  Te amo Jujuba ! ;)
     page should contain                      Email address
     page should contain element              css=#email
     page should contain                      Order reference
