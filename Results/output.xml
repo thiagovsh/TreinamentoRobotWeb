@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.8.2 on win32)" generated="20200417 23:45:40.785" rpa="false">
+<suite id="s1" name="02 ValidarObjetosTelaContactUs" source="C:\treinamento\Cases\01__Requisito\02_ValidarObjetosTelaContactUs.robot">
+<test id="s1-t1" name="TC02: Validar os objetos do formulario Customer Service - Contact Us">
+<kw name="Abrir navegador" library="login" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200417 23:45:41.032" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20200417 23:45:41.032" endtime="20200417 23:45:46.404"></status>
+</kw>
+<status status="PASS" starttime="20200417 23:45:41.031" endtime="20200417 23:45:46.405"></status>
+</kw>
+<kw name="Given que estou na tela home" library="login">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>http://automationpractice.com</arg>
+</arguments>
+<msg timestamp="20200417 23:45:46.406" level="INFO">Opening url 'http://automationpractice.com'</msg>
+<status status="PASS" starttime="20200417 23:45:46.406" endtime="20200417 23:46:09.887"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>My Store</arg>
+</arguments>
+<msg timestamp="20200417 23:46:09.893" level="INFO">Page title is 'My Store'.</msg>
+<status status="PASS" starttime="20200417 23:46:09.887" endtime="20200417 23:46:09.893"></status>
+</kw>
+<status status="PASS" starttime="20200417 23:45:46.406" endtime="20200417 23:46:09.893"></status>
+</kw>
+<kw name="When aciono o link Contact us" library="login">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="contact-link"]</arg>
+</arguments>
+<msg timestamp="20200417 23:46:09.894" level="INFO">Clicking element 'xpath=//*[@id="contact-link"]'.</msg>
+<status status="PASS" starttime="20200417 23:46:09.894" endtime="20200417 23:46:10.660"></status>
+</kw>
+<status status="PASS" starttime="20200417 23:46:09.894" endtime="20200417 23:46:10.660"></status>
+</kw>
+<kw name="And que estou na tela Contact us" library="login">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Customer service - Contact us</arg>
+</arguments>
+<msg timestamp="20200417 23:46:12.053" level="INFO">Current page contains text 'Customer service - Contact us'.</msg>
+<status status="PASS" starttime="20200417 23:46:10.673" endtime="20200417 23:46:12.053"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Contact us - My Store</arg>
+</arguments>
+<msg timestamp="20200417 23:46:12.059" level="INFO">Page title is 'Contact us - My Store'.</msg>
+<status status="PASS" starttime="20200417 23:46:12.054" endtime="20200417 23:46:12.059"></status>
+</kw>
+<status status="PASS" starttime="20200417 23:46:10.673" endtime="20200417 23:46:12.059"></status>
+</kw>
+<kw name="Then valido os elementos do formulário Customer Service - Contact US" library="login">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>send a message</arg>
+</arguments>
+<msg timestamp="20200417 23:46:12.079" level="INFO">Current page contains text 'send a message'.</msg>
+<status status="PASS" starttime="20200417 23:46:12.060" endtime="20200417 23:46:12.080"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Subject Heading</arg>
+</arguments>
+<msg timestamp="20200417 23:46:12.096" level="INFO">Current page contains text 'Subject Heading'.</msg>
+<status status="PASS" starttime="20200417 23:46:12.080" endtime="20200417 23:46:12.097"></status>
+</kw>
+<status status="PASS" starttime="20200417 23:46:12.060" endtime="20200417 23:46:12.097"></status>
+</kw>
+<tags>
+<tag>TC02</tag>
+</tags>
+<status status="PASS" starttime="20200417 23:45:41.030" endtime="20200417 23:46:12.098" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20200417 23:45:40.786" endtime="20200417 23:46:12.101"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">TC02</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="02 ValidarObjetosTelaContactUs">02 ValidarObjetosTelaContactUs</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
