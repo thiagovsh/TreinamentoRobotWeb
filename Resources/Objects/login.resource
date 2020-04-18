@@ -27,13 +27,22 @@ aciono o link Contact us
     click element                            xpath=//*[@id="contact-link"]
 
 que estou na tela Contact us
+    wait until page contains element         css=#uniform-id_contact  5s 
     page should contain                      Customer service - Contact us
     Title Should be                          Contact us - My Store
 
-valido os elementos do formulário Customer Service - Contact US
+valido os elementos do formulário Customer Service - Contact US                                             
     page should contain                      send a message
     page should contain                      Subject Heading
-  
+    page should contain element              css=#uniform-id_contact    
+    page should contain element              css=#center_column > form > fieldset > div.clearfix > div.col-xs-12.col-md-9 > div > label
+    page should contain element              css=#message
+    page should contain                      Email address
+    page should contain element              css=#email
+    page should contain                      Order reference
+    page should contain element              css=#id_order
+    page should contain                      Attach File
+    page should contain element              css=#fileUpload
+    page should contain                      Send
+    page should contain element              css=#center_column > form > fieldset > div.submit
 
-    #wait until element is visible            ="logo img-responsive" src="http://automationpractice.com/img/logo.jpg" alt="My Store" width="350" height="99">
-    
