@@ -7,7 +7,7 @@ Test Teardown         Fechar navegador
 Validar o direcionamento do link Get Savings Now
     [Tags]  TC01
 
-    Given que estou na tela Home
-    When aciono o link Get Savings Now
-    Then será apresentada a tela Home
+    Dado   que estou na tela Home
+    Quando aciono o link Get Savings Now
+    Então  será apresentada a tela Home
     
