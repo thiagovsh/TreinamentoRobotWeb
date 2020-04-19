@@ -1,9 +1,9 @@
 *** Settings ***
-Resource         ../Resources/Objects/login.resource
-Resource         ../Resources/Objects/validacao.resource
+Resource        ../Resources/Objects/login.resource
+Resource        ../Resources/Objects/validacao.resource
 
-Test Setup       Abrir navegador
-Test Teardown    Fechar navegador
+Test Setup      Abrir navegador
+Test Teardown   Fechar navegador
 
 *** Test Case ***
 TC02: Validar os objetos do formulario Customer Service - Contact Us
