@@ -1,7 +1,7 @@
 *** Settings ***
 Resource         ../Resources/Objects/login.resource
 Test Setup       Abrir navegador
-Test Teardown    Fechar navegador
+#Test Teardown    Fechar navegador
 
 *** Test Case ***
 TC02: Validar os objetos do formulario Customer Service - Contact Us

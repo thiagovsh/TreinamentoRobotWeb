@@ -6,38 +6,65 @@ ${URL}                                       http://automationpractice.com
 ${BROWSER}                                   chrome
 
 *** Keywords ***
+Dado
+    [Arguments]  ${KEYWORD}
+    Run Keyword  ${KEYWORD}
+
+Quando 
+    [Arguments]  ${KEYWORD}
+    Run Keyword  ${KEYWORD}
+
+Então
+    [Arguments]  ${KEYWORD}
+    Run Keyword  ${KEYWORD}
+
+E
+    [Arguments]  ${KEYWORD}
+    Run Keyword  ${KEYWORD}
+
 Abrir navegador
+    [Documentation]  Abri o browser com a página em branco
     Open Browser                             about:blank     ${BROWSER}
 
 Fechar navegador
     Close Browser
 
 que estou na tela Home
+    [Documentation]  Direciona para a tela Home e confirma o nome da página
     Go To                                    http://automationpractice.com
     Title Should Be                          My Store
 
-aciono o link Get Savings Now
-    wait until Element is visible            xpath=//*[@id="header"]/div[1]
-    click Element                            xpath=//*[@id="header"]/div[1]
-    
-será apresentada a tela Home
-   Title Should Be                           My Store
-
-aciono o link Contact us
-    click element                            xpath=//*[@id="contact-link"]
+que estou na tela Login - My Store 
+    [Documentation]  Aguarda a tela apresentar o elemento, e a página deve conter o elemento e título mencionado abaixo 
+    wait until page contains element         css=#center_column > h1  5s 
+    Title Should be                          Login - My Store
 
 que estou na tela Contact us
     wait until page contains element         css=#uniform-id_contact  5s 
     page should contain                      Customer service - Contact us
     Title Should be                          Contact us - My Store
 
-valido os elementos do formulário Customer Service - Contact US                                             
+aciono o link Get Savings Now
+    wait until Element is visible            xpath=//*[@id="header"]/div[1]
+    click Element                            xpath=//*[@id="header"]/div[1]
+
+aciono o link Sign in
+    [Documentation]  Clica no elemento Sign in
+    click element                            css=#header div.header_user_info
+
+aciono o link Contact us
+    click element                            xpath=//*[@id="contact-link"]
+
+será apresentada a tela Home
+   Title Should Be                           My Store
+
+
+valido os elementos do formulário Customer Service - Contact US
     page should contain                      send a message
     page should contain                      Subject Heading
     page should contain element              css=#uniform-id_contact    
     page should contain element              css=#center_column > form > fieldset > div.clearfix > div.col-xs-12.col-md-9 > div > label
     page should contain element              css=#message
-    input text                               css=#message  Te amo Jujuba ! ;)
     page should contain                      Email address
     page should contain element              css=#email
     page should contain                      Order reference
@@ -46,4 +73,17 @@ valido os elementos do formulário Customer Service - Contact US
     page should contain element              css=#fileUpload
     page should contain                      Send
     page should contain element              css=#center_column > form > fieldset > div.submit
+
+valido os elementos do formulário Authentication
+    page should contain element              css=#create-account_form
+    page should contain element              css=#create-account_form > div > div.form-group > label
+    page should contain element              css=#email_create
+    page should contain element              css=#create-account_form > div > div.submit
+    page should contain element              css=#login_form > h3
+    page should contain element              css=#login_form > div > div:nth-child(1) > label
+    page should contain element              css=#email
+    page should contain element              css=#login_form > div > div:nth-child(2) > label
+    page should contain element              css=#login_form > div > p.lost_password
+    page should contain element              css=#SubmitLogin
+
 
