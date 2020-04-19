@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.2 (Python 3.8.2 on win32)" generated="20200418 22:42:28.975" rpa="false">
-<suite id="s1" name="Cases" source="C:\treinamento\Cases">
-<suite id="s1-s1" name="Requisito" source="C:\treinamento\Cases\01__Requisito">
-<suite id="s1-s1-s1" name="03 ValidarObjetosTelaSignIn" source="C:\treinamento\Cases\01__Requisito\03_ValidarObjetosTelaSignIn.robot">
-<test id="s1-s1-s1-t1" name="TC03: Validar os objetos do formulario do link Sign in">
+<robot generator="Robot 3.1.2 (Python 3.8.2 on win32)" generated="20200418 23:23:20.217" rpa="false">
+<suite id="s1" name="Requisito" source="C:\treinamento\Cases\01__Requisito">
+<suite id="s1-s1" name="01 ValidarLinkHeaderGetSavingsNow" source="C:\treinamento\Cases\01__Requisito\01_ValidarLinkHeaderGetSavingsNow.robot">
+<test id="s1-s1-t1" name="Validar o direcionamento do link Get Savings Now">
 <kw name="Abrir navegador" library="login" type="setup">
 <doc>Abri o browser com a página em branco</doc>
 <kw name="Open Browser" library="SeleniumLibrary">
@@ -12,10 +11,127 @@
 <arg>about:blank</arg>
 <arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20200418 22:42:29.242" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20200418 22:42:29.242" endtime="20200418 22:42:34.632"></status>
+<msg timestamp="20200418 23:23:20.484" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20200418 23:23:20.484" endtime="20200418 23:23:25.887"></status>
 </kw>
-<status status="PASS" starttime="20200418 22:42:29.242" endtime="20200418 22:42:34.632"></status>
+<status status="PASS" starttime="20200418 23:23:20.483" endtime="20200418 23:23:25.888"></status>
+</kw>
+<kw name="Dado" library="login">
+<arguments>
+<arg>que estou na tela Home</arg>
+</arguments>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>${KEYWORD}</arg>
+</arguments>
+<kw name="que estou na tela Home" library="login">
+<doc>Direciona para a tela Home e confirma o nome da página</doc>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>http://automationpractice.com</arg>
+</arguments>
+<msg timestamp="20200418 23:23:25.891" level="INFO">Opening url 'http://automationpractice.com'</msg>
+<status status="PASS" starttime="20200418 23:23:25.891" endtime="20200418 23:23:32.833"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>My Store</arg>
+</arguments>
+<msg timestamp="20200418 23:23:32.840" level="INFO">Page title is 'My Store'.</msg>
+<status status="PASS" starttime="20200418 23:23:32.833" endtime="20200418 23:23:32.840"></status>
+</kw>
+<status status="PASS" starttime="20200418 23:23:25.891" endtime="20200418 23:23:32.841"></status>
+</kw>
+<status status="PASS" starttime="20200418 23:23:25.890" endtime="20200418 23:23:32.841"></status>
+</kw>
+<status status="PASS" starttime="20200418 23:23:25.889" endtime="20200418 23:23:32.841"></status>
+</kw>
+<kw name="Quando" library="login">
+<arguments>
+<arg>aciono o link Get Savings Now</arg>
+</arguments>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>${KEYWORD}</arg>
+</arguments>
+<kw name="aciono o link Get Savings Now" library="login">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//*[@id="header"]/div[1]</arg>
+</arguments>
+<status status="PASS" starttime="20200418 23:23:32.843" endtime="20200418 23:23:32.877"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="header"]/div[1]</arg>
+</arguments>
+<msg timestamp="20200418 23:23:32.877" level="INFO">Clicking element 'xpath=//*[@id="header"]/div[1]'.</msg>
+<status status="PASS" starttime="20200418 23:23:32.877" endtime="20200418 23:23:33.534"></status>
+</kw>
+<status status="PASS" starttime="20200418 23:23:32.842" endtime="20200418 23:23:33.535"></status>
+</kw>
+<status status="PASS" starttime="20200418 23:23:32.842" endtime="20200418 23:23:33.535"></status>
+</kw>
+<status status="PASS" starttime="20200418 23:23:32.841" endtime="20200418 23:23:33.536"></status>
+</kw>
+<kw name="Então" library="login">
+<arguments>
+<arg>será apresentada a tela Home</arg>
+</arguments>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>${KEYWORD}</arg>
+</arguments>
+<kw name="será apresentada a tela Home" library="validacao">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>My Store</arg>
+</arguments>
+<msg timestamp="20200418 23:23:33.563" level="INFO">Page title is 'My Store'.</msg>
+<status status="PASS" starttime="20200418 23:23:33.541" endtime="20200418 23:23:33.563"></status>
+</kw>
+<status status="PASS" starttime="20200418 23:23:33.541" endtime="20200418 23:23:33.563"></status>
+</kw>
+<status status="PASS" starttime="20200418 23:23:33.540" endtime="20200418 23:23:33.563"></status>
+</kw>
+<status status="PASS" starttime="20200418 23:23:33.539" endtime="20200418 23:23:33.564"></status>
+</kw>
+<kw name="Fechar navegador" library="login" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200418 23:23:33.567" endtime="20200418 23:23:35.748"></status>
+</kw>
+<status status="PASS" starttime="20200418 23:23:33.566" endtime="20200418 23:23:35.748"></status>
+</kw>
+<tags>
+<tag>TC01</tag>
+</tags>
+<status status="PASS" starttime="20200418 23:23:20.482" endtime="20200418 23:23:35.749" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20200418 23:23:20.243" endtime="20200418 23:23:35.754"></status>
+</suite>
+<suite id="s1-s2" name="02 ValidarObjetosTelaContactUs" source="C:\treinamento\Cases\01__Requisito\02_ValidarObjetosTelaContactUs.robot">
+<test id="s1-s2-t1" name="TC02: Validar os objetos do formulario Customer Service - Contact Us">
+<kw name="Abrir navegador" library="login" type="setup">
+<doc>Abri o browser com a página em branco</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200418 23:23:35.793" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20200418 23:23:35.793" endtime="20200418 23:23:41.007"></status>
+</kw>
+<status status="PASS" starttime="20200418 23:23:35.792" endtime="20200418 23:23:41.008"></status>
 </kw>
 <kw name="Dado" library="login">
 <arguments>
@@ -33,22 +149,268 @@
 <arguments>
 <arg>http://automationpractice.com</arg>
 </arguments>
-<msg timestamp="20200418 22:42:34.635" level="INFO">Opening url 'http://automationpractice.com'</msg>
-<status status="PASS" starttime="20200418 22:42:34.635" endtime="20200418 22:42:46.910"></status>
+<msg timestamp="20200418 23:23:41.010" level="INFO">Opening url 'http://automationpractice.com'</msg>
+<status status="PASS" starttime="20200418 23:23:41.010" endtime="20200418 23:23:48.035"></status>
 </kw>
 <kw name="Title Should Be" library="SeleniumLibrary">
 <doc>Verifies that the current page title equals ``title``.</doc>
 <arguments>
 <arg>My Store</arg>
 </arguments>
-<msg timestamp="20200418 22:42:46.917" level="INFO">Page title is 'My Store'.</msg>
-<status status="PASS" starttime="20200418 22:42:46.910" endtime="20200418 22:42:46.917"></status>
+<msg timestamp="20200418 23:23:48.041" level="INFO">Page title is 'My Store'.</msg>
+<status status="PASS" starttime="20200418 23:23:48.035" endtime="20200418 23:23:48.042"></status>
 </kw>
-<status status="PASS" starttime="20200418 22:42:34.634" endtime="20200418 22:42:46.917"></status>
+<status status="PASS" starttime="20200418 23:23:41.010" endtime="20200418 23:23:48.042"></status>
 </kw>
-<status status="PASS" starttime="20200418 22:42:34.633" endtime="20200418 22:42:46.917"></status>
+<status status="PASS" starttime="20200418 23:23:41.009" endtime="20200418 23:23:48.042"></status>
 </kw>
-<status status="PASS" starttime="20200418 22:42:34.633" endtime="20200418 22:42:46.917"></status>
+<status status="PASS" starttime="20200418 23:23:41.009" endtime="20200418 23:23:48.042"></status>
+</kw>
+<kw name="Quando" library="login">
+<arguments>
+<arg>aciono o link Contact us</arg>
+</arguments>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>${KEYWORD}</arg>
+</arguments>
+<kw name="aciono o link Contact us" library="login">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="contact-link"]</arg>
+</arguments>
+<msg timestamp="20200418 23:23:48.044" level="INFO">Clicking element 'xpath=//*[@id="contact-link"]'.</msg>
+<status status="PASS" starttime="20200418 23:23:48.044" endtime="20200418 23:23:48.876"></status>
+</kw>
+<status status="PASS" starttime="20200418 23:23:48.043" endtime="20200418 23:23:48.876"></status>
+</kw>
+<status status="PASS" starttime="20200418 23:23:48.043" endtime="20200418 23:23:48.876"></status>
+</kw>
+<status status="PASS" starttime="20200418 23:23:48.043" endtime="20200418 23:23:48.876"></status>
+</kw>
+<kw name="E" library="login">
+<arguments>
+<arg>que estou na tela Contact us</arg>
+</arguments>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>${KEYWORD}</arg>
+</arguments>
+<kw name="que estou na tela Contact us" library="login">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>css=#uniform-id_contact</arg>
+<arg>5s</arg>
+</arguments>
+<status status="PASS" starttime="20200418 23:23:48.879" endtime="20200418 23:23:50.075"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Customer service - Contact us</arg>
+</arguments>
+<msg timestamp="20200418 23:23:50.092" level="INFO">Current page contains text 'Customer service - Contact us'.</msg>
+<status status="PASS" starttime="20200418 23:23:50.076" endtime="20200418 23:23:50.092"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Contact us - My Store</arg>
+</arguments>
+<msg timestamp="20200418 23:23:50.097" level="INFO">Page title is 'Contact us - My Store'.</msg>
+<status status="PASS" starttime="20200418 23:23:50.092" endtime="20200418 23:23:50.097"></status>
+</kw>
+<status status="PASS" starttime="20200418 23:23:48.879" endtime="20200418 23:23:50.098"></status>
+</kw>
+<status status="PASS" starttime="20200418 23:23:48.878" endtime="20200418 23:23:50.098"></status>
+</kw>
+<status status="PASS" starttime="20200418 23:23:48.877" endtime="20200418 23:23:50.098"></status>
+</kw>
+<kw name="Então" library="login">
+<arguments>
+<arg>valido os elementos do formulário Customer Service - Contact US</arg>
+</arguments>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>${KEYWORD}</arg>
+</arguments>
+<kw name="valido os elementos do formulário Customer Service - Contact US" library="validacao">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>send a message</arg>
+</arguments>
+<msg timestamp="20200418 23:23:50.116" level="INFO">Current page contains text 'send a message'.</msg>
+<status status="PASS" starttime="20200418 23:23:50.099" endtime="20200418 23:23:50.116"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Subject Heading</arg>
+</arguments>
+<msg timestamp="20200418 23:23:50.132" level="INFO">Current page contains text 'Subject Heading'.</msg>
+<status status="PASS" starttime="20200418 23:23:50.116" endtime="20200418 23:23:50.132"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>css=#uniform-id_contact</arg>
+</arguments>
+<msg timestamp="20200418 23:23:50.139" level="INFO">Current page contains element 'css=#uniform-id_contact'.</msg>
+<status status="PASS" starttime="20200418 23:23:50.132" endtime="20200418 23:23:50.139"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>css=#center_column &gt; form &gt; fieldset &gt; div.clearfix &gt; div.col-xs-12.col-md-9 &gt; div &gt; label</arg>
+</arguments>
+<msg timestamp="20200418 23:23:50.149" level="INFO">Current page contains element 'css=#center_column &gt; form &gt; fieldset &gt; div.clearfix &gt; div.col-xs-12.col-md-9 &gt; div &gt; label'.</msg>
+<status status="PASS" starttime="20200418 23:23:50.139" endtime="20200418 23:23:50.149"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>css=#message</arg>
+</arguments>
+<msg timestamp="20200418 23:23:50.159" level="INFO">Current page contains element 'css=#message'.</msg>
+<status status="PASS" starttime="20200418 23:23:50.149" endtime="20200418 23:23:50.159"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Email address</arg>
+</arguments>
+<msg timestamp="20200418 23:23:50.174" level="INFO">Current page contains text 'Email address'.</msg>
+<status status="PASS" starttime="20200418 23:23:50.159" endtime="20200418 23:23:50.174"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>css=#email</arg>
+</arguments>
+<msg timestamp="20200418 23:23:50.184" level="INFO">Current page contains element 'css=#email'.</msg>
+<status status="PASS" starttime="20200418 23:23:50.174" endtime="20200418 23:23:50.184"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Order reference</arg>
+</arguments>
+<msg timestamp="20200418 23:23:50.198" level="INFO">Current page contains text 'Order reference'.</msg>
+<status status="PASS" starttime="20200418 23:23:50.184" endtime="20200418 23:23:50.198"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>css=#id_order</arg>
+</arguments>
+<msg timestamp="20200418 23:23:50.208" level="INFO">Current page contains element 'css=#id_order'.</msg>
+<status status="PASS" starttime="20200418 23:23:50.198" endtime="20200418 23:23:50.208"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Attach File</arg>
+</arguments>
+<msg timestamp="20200418 23:23:50.222" level="INFO">Current page contains text 'Attach File'.</msg>
+<status status="PASS" starttime="20200418 23:23:50.208" endtime="20200418 23:23:50.222"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>css=#fileUpload</arg>
+</arguments>
+<msg timestamp="20200418 23:23:50.232" level="INFO">Current page contains element 'css=#fileUpload'.</msg>
+<status status="PASS" starttime="20200418 23:23:50.222" endtime="20200418 23:23:50.232"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Send</arg>
+</arguments>
+<msg timestamp="20200418 23:23:50.247" level="INFO">Current page contains text 'Send'.</msg>
+<status status="PASS" starttime="20200418 23:23:50.233" endtime="20200418 23:23:50.247"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>css=#center_column &gt; form &gt; fieldset &gt; div.submit</arg>
+</arguments>
+<msg timestamp="20200418 23:23:50.257" level="INFO">Current page contains element 'css=#center_column &gt; form &gt; fieldset &gt; div.submit'.</msg>
+<status status="PASS" starttime="20200418 23:23:50.247" endtime="20200418 23:23:50.257"></status>
+</kw>
+<status status="PASS" starttime="20200418 23:23:50.099" endtime="20200418 23:23:50.257"></status>
+</kw>
+<status status="PASS" starttime="20200418 23:23:50.099" endtime="20200418 23:23:50.257"></status>
+</kw>
+<status status="PASS" starttime="20200418 23:23:50.098" endtime="20200418 23:23:50.257"></status>
+</kw>
+<kw name="Fechar navegador" library="login" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200418 23:23:50.258" endtime="20200418 23:23:52.496"></status>
+</kw>
+<status status="PASS" starttime="20200418 23:23:50.258" endtime="20200418 23:23:52.496"></status>
+</kw>
+<tags>
+<tag>TC02</tag>
+</tags>
+<status status="PASS" starttime="20200418 23:23:35.791" endtime="20200418 23:23:52.496" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20200418 23:23:35.763" endtime="20200418 23:23:52.511"></status>
+</suite>
+<suite id="s1-s3" name="03 ValidarObjetosTelaSignIn" source="C:\treinamento\Cases\01__Requisito\03_ValidarObjetosTelaSignIn.robot">
+<test id="s1-s3-t1" name="TC03: Validar os objetos do formulario do link Sign in">
+<kw name="Abrir navegador" library="login" type="setup">
+<doc>Abri o browser com a página em branco</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200418 23:23:52.561" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20200418 23:23:52.561" endtime="20200418 23:23:57.820"></status>
+</kw>
+<status status="PASS" starttime="20200418 23:23:52.561" endtime="20200418 23:23:57.820"></status>
+</kw>
+<kw name="Dado" library="login">
+<arguments>
+<arg>que estou na tela home</arg>
+</arguments>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>${KEYWORD}</arg>
+</arguments>
+<kw name="que estou na tela Home" library="login">
+<doc>Direciona para a tela Home e confirma o nome da página</doc>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>http://automationpractice.com</arg>
+</arguments>
+<msg timestamp="20200418 23:23:57.822" level="INFO">Opening url 'http://automationpractice.com'</msg>
+<status status="PASS" starttime="20200418 23:23:57.822" endtime="20200418 23:24:04.355"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>My Store</arg>
+</arguments>
+<msg timestamp="20200418 23:24:04.365" level="INFO">Page title is 'My Store'.</msg>
+<status status="PASS" starttime="20200418 23:24:04.355" endtime="20200418 23:24:04.365"></status>
+</kw>
+<status status="PASS" starttime="20200418 23:23:57.821" endtime="20200418 23:24:04.365"></status>
+</kw>
+<status status="PASS" starttime="20200418 23:23:57.821" endtime="20200418 23:24:04.365"></status>
+</kw>
+<status status="PASS" starttime="20200418 23:23:57.821" endtime="20200418 23:24:04.365"></status>
 </kw>
 <kw name="Quando" library="login">
 <arguments>
@@ -66,14 +428,14 @@
 <arguments>
 <arg>css=#header div.header_user_info</arg>
 </arguments>
-<msg timestamp="20200418 22:42:46.919" level="INFO">Clicking element 'css=#header div.header_user_info'.</msg>
-<status status="PASS" starttime="20200418 22:42:46.919" endtime="20200418 22:42:48.109"></status>
+<msg timestamp="20200418 23:24:04.369" level="INFO">Clicking element 'css=#header div.header_user_info'.</msg>
+<status status="PASS" starttime="20200418 23:24:04.368" endtime="20200418 23:24:05.737"></status>
 </kw>
-<status status="PASS" starttime="20200418 22:42:46.919" endtime="20200418 22:42:48.109"></status>
+<status status="PASS" starttime="20200418 23:24:04.368" endtime="20200418 23:24:05.737"></status>
 </kw>
-<status status="PASS" starttime="20200418 22:42:46.919" endtime="20200418 22:42:48.109"></status>
+<status status="PASS" starttime="20200418 23:24:04.367" endtime="20200418 23:24:05.737"></status>
 </kw>
-<status status="PASS" starttime="20200418 22:42:46.918" endtime="20200418 22:42:48.110"></status>
+<status status="PASS" starttime="20200418 23:24:04.366" endtime="20200418 23:24:05.738"></status>
 </kw>
 <kw name="E" library="login">
 <arguments>
@@ -92,21 +454,21 @@
 <arg>css=#center_column &gt; h1</arg>
 <arg>5s</arg>
 </arguments>
-<status status="PASS" starttime="20200418 22:42:48.113" endtime="20200418 22:42:49.490"></status>
+<status status="PASS" starttime="20200418 23:24:05.741" endtime="20200418 23:24:06.563"></status>
 </kw>
 <kw name="Title Should Be" library="SeleniumLibrary">
 <doc>Verifies that the current page title equals ``title``.</doc>
 <arguments>
 <arg>Login - My Store</arg>
 </arguments>
-<msg timestamp="20200418 22:42:49.495" level="INFO">Page title is 'Login - My Store'.</msg>
-<status status="PASS" starttime="20200418 22:42:49.490" endtime="20200418 22:42:49.495"></status>
+<msg timestamp="20200418 23:24:06.569" level="INFO">Page title is 'Login - My Store'.</msg>
+<status status="PASS" starttime="20200418 23:24:06.563" endtime="20200418 23:24:06.569"></status>
 </kw>
-<status status="PASS" starttime="20200418 22:42:48.113" endtime="20200418 22:42:49.495"></status>
+<status status="PASS" starttime="20200418 23:24:05.740" endtime="20200418 23:24:06.569"></status>
 </kw>
-<status status="PASS" starttime="20200418 22:42:48.112" endtime="20200418 22:42:49.495"></status>
+<status status="PASS" starttime="20200418 23:24:05.740" endtime="20200418 23:24:06.569"></status>
 </kw>
-<status status="PASS" starttime="20200418 22:42:48.111" endtime="20200418 22:42:49.495"></status>
+<status status="PASS" starttime="20200418 23:24:05.739" endtime="20200418 23:24:06.569"></status>
 </kw>
 <kw name="Então" library="login">
 <arguments>
@@ -117,123 +479,258 @@
 <arguments>
 <arg>${KEYWORD}</arg>
 </arguments>
-<kw name="valido os elementos do formulário Authentication" library="login">
+<kw name="valido os elementos do formulário Authentication" library="validacao">
 <kw name="Page Should Contain Element" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
 <arguments>
 <arg>css=#create-account_form</arg>
 </arguments>
-<msg timestamp="20200418 22:42:49.532" level="INFO">Current page contains element 'css=#create-account_form'.</msg>
-<status status="PASS" starttime="20200418 22:42:49.497" endtime="20200418 22:42:49.532"></status>
+<msg timestamp="20200418 23:24:06.603" level="INFO">Current page contains element 'css=#create-account_form'.</msg>
+<status status="PASS" starttime="20200418 23:24:06.571" endtime="20200418 23:24:06.603"></status>
 </kw>
 <kw name="Page Should Contain Element" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
 <arguments>
 <arg>css=#create-account_form &gt; div &gt; div.form-group &gt; label</arg>
 </arguments>
-<msg timestamp="20200418 22:42:49.546" level="INFO">Current page contains element 'css=#create-account_form &gt; div &gt; div.form-group &gt; label'.</msg>
-<status status="PASS" starttime="20200418 22:42:49.532" endtime="20200418 22:42:49.546"></status>
+<msg timestamp="20200418 23:24:06.616" level="INFO">Current page contains element 'css=#create-account_form &gt; div &gt; div.form-group &gt; label'.</msg>
+<status status="PASS" starttime="20200418 23:24:06.603" endtime="20200418 23:24:06.616"></status>
 </kw>
 <kw name="Page Should Contain Element" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
 <arguments>
 <arg>css=#email_create</arg>
 </arguments>
-<msg timestamp="20200418 22:42:49.558" level="INFO">Current page contains element 'css=#email_create'.</msg>
-<status status="PASS" starttime="20200418 22:42:49.546" endtime="20200418 22:42:49.558"></status>
+<msg timestamp="20200418 23:24:06.629" level="INFO">Current page contains element 'css=#email_create'.</msg>
+<status status="PASS" starttime="20200418 23:24:06.616" endtime="20200418 23:24:06.629"></status>
 </kw>
 <kw name="Page Should Contain Element" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
 <arguments>
 <arg>css=#create-account_form &gt; div &gt; div.submit</arg>
 </arguments>
-<msg timestamp="20200418 22:42:49.569" level="INFO">Current page contains element 'css=#create-account_form &gt; div &gt; div.submit'.</msg>
-<status status="PASS" starttime="20200418 22:42:49.560" endtime="20200418 22:42:49.569"></status>
+<msg timestamp="20200418 23:24:06.640" level="INFO">Current page contains element 'css=#create-account_form &gt; div &gt; div.submit'.</msg>
+<status status="PASS" starttime="20200418 23:24:06.629" endtime="20200418 23:24:06.640"></status>
 </kw>
 <kw name="Page Should Contain Element" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
 <arguments>
 <arg>css=#login_form &gt; h3</arg>
 </arguments>
-<msg timestamp="20200418 22:42:49.582" level="INFO">Current page contains element 'css=#login_form &gt; h3'.</msg>
-<status status="PASS" starttime="20200418 22:42:49.569" endtime="20200418 22:42:49.582"></status>
+<msg timestamp="20200418 23:24:06.653" level="INFO">Current page contains element 'css=#login_form &gt; h3'.</msg>
+<status status="PASS" starttime="20200418 23:24:06.641" endtime="20200418 23:24:06.654"></status>
 </kw>
 <kw name="Page Should Contain Element" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
 <arguments>
 <arg>css=#login_form &gt; div &gt; div:nth-child(1) &gt; label</arg>
 </arguments>
-<msg timestamp="20200418 22:42:49.594" level="INFO">Current page contains element 'css=#login_form &gt; div &gt; div:nth-child(1) &gt; label'.</msg>
-<status status="PASS" starttime="20200418 22:42:49.582" endtime="20200418 22:42:49.594"></status>
+<msg timestamp="20200418 23:24:06.664" level="INFO">Current page contains element 'css=#login_form &gt; div &gt; div:nth-child(1) &gt; label'.</msg>
+<status status="PASS" starttime="20200418 23:24:06.654" endtime="20200418 23:24:06.664"></status>
 </kw>
 <kw name="Page Should Contain Element" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
 <arguments>
 <arg>css=#email</arg>
 </arguments>
-<msg timestamp="20200418 22:42:49.608" level="INFO">Current page contains element 'css=#email'.</msg>
-<status status="PASS" starttime="20200418 22:42:49.595" endtime="20200418 22:42:49.608"></status>
+<msg timestamp="20200418 23:24:06.678" level="INFO">Current page contains element 'css=#email'.</msg>
+<status status="PASS" starttime="20200418 23:24:06.664" endtime="20200418 23:24:06.678"></status>
 </kw>
 <kw name="Page Should Contain Element" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
 <arguments>
 <arg>css=#login_form &gt; div &gt; div:nth-child(2) &gt; label</arg>
 </arguments>
-<msg timestamp="20200418 22:42:49.621" level="INFO">Current page contains element 'css=#login_form &gt; div &gt; div:nth-child(2) &gt; label'.</msg>
-<status status="PASS" starttime="20200418 22:42:49.608" endtime="20200418 22:42:49.621"></status>
+<msg timestamp="20200418 23:24:06.686" level="INFO">Current page contains element 'css=#login_form &gt; div &gt; div:nth-child(2) &gt; label'.</msg>
+<status status="PASS" starttime="20200418 23:24:06.678" endtime="20200418 23:24:06.686"></status>
 </kw>
 <kw name="Page Should Contain Element" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
 <arguments>
 <arg>css=#login_form &gt; div &gt; p.lost_password</arg>
 </arguments>
-<msg timestamp="20200418 22:42:49.633" level="INFO">Current page contains element 'css=#login_form &gt; div &gt; p.lost_password'.</msg>
-<status status="PASS" starttime="20200418 22:42:49.621" endtime="20200418 22:42:49.633"></status>
+<msg timestamp="20200418 23:24:06.686" level="INFO">Current page contains element 'css=#login_form &gt; div &gt; p.lost_password'.</msg>
+<status status="PASS" starttime="20200418 23:24:06.686" endtime="20200418 23:24:06.686"></status>
 </kw>
 <kw name="Page Should Contain Element" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
 <arguments>
 <arg>css=#SubmitLogin</arg>
 </arguments>
-<msg timestamp="20200418 22:42:49.651" level="INFO">Current page contains element 'css=#SubmitLogin'.</msg>
-<status status="PASS" starttime="20200418 22:42:49.633" endtime="20200418 22:42:49.651"></status>
+<msg timestamp="20200418 23:24:06.702" level="INFO">Current page contains element 'css=#SubmitLogin'.</msg>
+<status status="PASS" starttime="20200418 23:24:06.686" endtime="20200418 23:24:06.702"></status>
 </kw>
-<status status="PASS" starttime="20200418 22:42:49.496" endtime="20200418 22:42:49.652"></status>
+<status status="PASS" starttime="20200418 23:24:06.571" endtime="20200418 23:24:06.702"></status>
 </kw>
-<status status="PASS" starttime="20200418 22:42:49.496" endtime="20200418 22:42:49.652"></status>
+<status status="PASS" starttime="20200418 23:24:06.570" endtime="20200418 23:24:06.702"></status>
 </kw>
-<status status="PASS" starttime="20200418 22:42:49.496" endtime="20200418 22:42:49.652"></status>
+<status status="PASS" starttime="20200418 23:24:06.570" endtime="20200418 23:24:06.702"></status>
 </kw>
 <kw name="Fechar navegador" library="login" type="teardown">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20200418 22:42:49.653" endtime="20200418 22:42:51.880"></status>
+<status status="PASS" starttime="20200418 23:24:06.714" endtime="20200418 23:24:08.910"></status>
 </kw>
-<status status="PASS" starttime="20200418 22:42:49.652" endtime="20200418 22:42:51.880"></status>
+<status status="PASS" starttime="20200418 23:24:06.714" endtime="20200418 23:24:08.911"></status>
 </kw>
 <tags>
 <tag>TC03</tag>
 </tags>
-<status status="PASS" starttime="20200418 22:42:29.241" endtime="20200418 22:42:51.883" critical="yes"></status>
+<status status="PASS" starttime="20200418 23:23:52.560" endtime="20200418 23:24:08.913" critical="yes"></status>
 </test>
-<status status="PASS" starttime="20200418 22:42:29.014" endtime="20200418 22:42:51.893"></status>
+<status status="PASS" starttime="20200418 23:23:52.543" endtime="20200418 23:24:08.920"></status>
 </suite>
-<status status="PASS" starttime="20200418 22:42:29.003" endtime="20200418 22:42:51.925"></status>
+<suite id="s1-s4" name="04-Confirmarobjetivo" source="C:\treinamento\Cases\01__Requisito\04-confirmarobjetivo.robot">
+<test id="s1-s4-t1" name="TC04: Validar o direcionamento do link Get Savings Now">
+<kw name="Abrir navegador" library="login" type="setup">
+<doc>Abri o browser com a página em branco</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200418 23:24:08.987" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20200418 23:24:08.986" endtime="20200418 23:24:14.428"></status>
+</kw>
+<status status="PASS" starttime="20200418 23:24:08.986" endtime="20200418 23:24:14.428"></status>
+</kw>
+<kw name="Dado" library="login">
+<arguments>
+<arg>que estou na tela Home</arg>
+</arguments>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>${KEYWORD}</arg>
+</arguments>
+<kw name="que estou na tela Home" library="login">
+<doc>Direciona para a tela Home e confirma o nome da página</doc>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>http://automationpractice.com</arg>
+</arguments>
+<msg timestamp="20200418 23:24:14.433" level="INFO">Opening url 'http://automationpractice.com'</msg>
+<status status="PASS" starttime="20200418 23:24:14.432" endtime="20200418 23:24:21.076"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>My Store</arg>
+</arguments>
+<msg timestamp="20200418 23:24:21.087" level="INFO">Page title is 'My Store'.</msg>
+<status status="PASS" starttime="20200418 23:24:21.077" endtime="20200418 23:24:21.087"></status>
+</kw>
+<status status="PASS" starttime="20200418 23:24:14.432" endtime="20200418 23:24:21.088"></status>
+</kw>
+<status status="PASS" starttime="20200418 23:24:14.431" endtime="20200418 23:24:21.088"></status>
+</kw>
+<status status="PASS" starttime="20200418 23:24:14.431" endtime="20200418 23:24:21.088"></status>
+</kw>
+<kw name="Quando" library="login">
+<arguments>
+<arg>clico na imagem Your Logo</arg>
+</arguments>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>${KEYWORD}</arg>
+</arguments>
+<kw name="clico na imagem Your Logo" library="login">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>xpath=//*[@id="header"]/div[1]</arg>
+</arguments>
+<status status="PASS" starttime="20200418 23:24:21.090" endtime="20200418 23:24:21.105"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>css=#header div.header_user_info</arg>
+</arguments>
+<status status="PASS" starttime="20200418 23:24:21.106" endtime="20200418 23:24:21.119"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>My Store</arg>
+</arguments>
+<msg timestamp="20200418 23:24:21.123" level="INFO">Page title is 'My Store'.</msg>
+<status status="PASS" starttime="20200418 23:24:21.119" endtime="20200418 23:24:21.124"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css=#header_logo &gt; a &gt; img</arg>
+</arguments>
+<msg timestamp="20200418 23:24:21.124" level="INFO">Clicking element 'css=#header_logo &gt; a &gt; img'.</msg>
+<status status="PASS" starttime="20200418 23:24:21.124" endtime="20200418 23:24:22.342"></status>
+</kw>
+<status status="PASS" starttime="20200418 23:24:21.089" endtime="20200418 23:24:22.343"></status>
+</kw>
+<status status="PASS" starttime="20200418 23:24:21.089" endtime="20200418 23:24:22.343"></status>
+</kw>
+<status status="PASS" starttime="20200418 23:24:21.088" endtime="20200418 23:24:22.344"></status>
+</kw>
+<kw name="Então" library="login">
+<arguments>
+<arg>será apresentada a tela home</arg>
+</arguments>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>${KEYWORD}</arg>
+</arguments>
+<kw name="será apresentada a tela Home" library="validacao">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>My Store</arg>
+</arguments>
+<msg timestamp="20200418 23:24:22.418" level="INFO">Page title is 'My Store'.</msg>
+<status status="PASS" starttime="20200418 23:24:22.349" endtime="20200418 23:24:22.418"></status>
+</kw>
+<status status="PASS" starttime="20200418 23:24:22.348" endtime="20200418 23:24:22.418"></status>
+</kw>
+<status status="PASS" starttime="20200418 23:24:22.347" endtime="20200418 23:24:22.418"></status>
+</kw>
+<status status="PASS" starttime="20200418 23:24:22.346" endtime="20200418 23:24:22.418"></status>
+</kw>
+<kw name="Fechar navegador" library="login" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200418 23:24:22.419" endtime="20200418 23:24:24.590"></status>
+</kw>
+<status status="PASS" starttime="20200418 23:24:22.419" endtime="20200418 23:24:24.590"></status>
+</kw>
+<tags>
+<tag>TC04</tag>
+</tags>
+<status status="PASS" starttime="20200418 23:24:08.985" endtime="20200418 23:24:24.592" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20200418 23:24:08.956" endtime="20200418 23:24:24.602"></status>
 </suite>
-<status status="PASS" starttime="20200418 22:42:28.977" endtime="20200418 22:42:51.931"></status>
+<status status="PASS" starttime="20200418 23:23:20.218" endtime="20200418 23:24:24.615"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0">Critical Tests</stat>
-<stat pass="1" fail="0">All Tests</stat>
+<stat pass="4" fail="0">Critical Tests</stat>
+<stat pass="4" fail="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="1" fail="0">TC01</stat>
+<stat pass="1" fail="0">TC02</stat>
 <stat pass="1" fail="0">TC03</stat>
+<stat pass="1" fail="0">TC04</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" id="s1" name="Cases">Cases</stat>
-<stat pass="1" fail="0" id="s1-s1" name="Requisito">Cases.Requisito</stat>
-<stat pass="1" fail="0" id="s1-s1-s1" name="03 ValidarObjetosTelaSignIn">Cases.Requisito.03 ValidarObjetosTelaSignIn</stat>
+<stat pass="4" fail="0" id="s1" name="Requisito">Requisito</stat>
+<stat pass="1" fail="0" id="s1-s1" name="01 ValidarLinkHeaderGetSavingsNow">Requisito.01 ValidarLinkHeaderGetSavingsNow</stat>
+<stat pass="1" fail="0" id="s1-s2" name="02 ValidarObjetosTelaContactUs">Requisito.02 ValidarObjetosTelaContactUs</stat>
+<stat pass="1" fail="0" id="s1-s3" name="03 ValidarObjetosTelaSignIn">Requisito.03 ValidarObjetosTelaSignIn</stat>
+<stat pass="1" fail="0" id="s1-s4" name="04-Confirmarobjetivo">Requisito.04-Confirmarobjetivo</stat>
 </suite>
 </statistics>
 <errors>
