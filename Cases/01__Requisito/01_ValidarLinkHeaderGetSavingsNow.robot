@@ -6,10 +6,10 @@ Test Setup      Abrir navegador
 Test Teardown   Fechar navegador
 
 *** Test Case ***
-Validar o direcionamento do link Get Savings Now
+TC01: Validar o direcionamento do link Get Savings Now
     [Tags]  TC01
 
-    Dado    que estou na tela Home
-    Quando  aciono o link Get Savings Now
-    Então   será apresentada a tela Home
+    Dado        que estou na tela Home
+    Quando      aciono o link Get Savings Now
+    Então       será apresentada a tela Home
     

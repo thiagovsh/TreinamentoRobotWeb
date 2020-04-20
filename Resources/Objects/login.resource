@@ -46,6 +46,10 @@ que estou na tela Contact us
     page should contain                      Customer service - Contact us
     Title Should be                          Contact us - My Store
 
+estou na tela Blouses - My Store
+    wait until page contains element         css=#center_column > div.content_scene_cat  5s 
+    page should contain                      Catalog
+    Title Should be                          Blouses - My Store
 
 estou na tela T-shirts - My Store
     wait until page contains element         css=#center_column > h1 > span.cat-name  5s 
@@ -71,6 +75,9 @@ passo o cursor sobre a opção Women
  
 seleciono a opção T-shirts
     click element                            xpath=//*[@id="block_top_menu"]/ul/li[1]/ul/li[1]/ul/li[1]/a
+
+seleciono a opção Blouses
+    click element                            css=#block_top_menu > ul > li:nth-child(1) > ul > li:nth-child(1) > ul > li:nth-child(2) > a
 
 aciono o link Contact us   
     click element                            xpath=//*[@id="contact-link"

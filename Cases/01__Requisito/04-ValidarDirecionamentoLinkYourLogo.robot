@@ -9,6 +9,6 @@ Test Teardown   Fechar navegador
 TC04: Validar o direcionamento do link Your Logo
     [Tags]  TC04
 
-    Dado     que estou na tela Home
-    Quando   clico na imagem Your Logo
-    Então    será apresentada a tela home
+    Dado      que estou na tela Home
+    Quando    clico na imagem Your Logo
+    Então     será apresentada a tela home
