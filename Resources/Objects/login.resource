@@ -61,6 +61,12 @@ estou na tela Casual Dresses - My Store
     page should contain                      Catalog
     Title Should be                          Casual Dresses - My Store
 
+estou na tela Evening Dresses - My Store
+[Documentation] valida se estou na tela Evening Dresses
+    wait until page contains element         css=#center_column > h1 > span.cat-name
+    page should contain                      Catalog
+    Title Should be                          Evening Dresses - My Store
+
 aciono o link Get Savings Now
     wait until Element is visible            xpath=//*[@id="header"]/div[1]
     click Element                            xpath=//*[@id="header"]/div[1]
@@ -86,6 +92,9 @@ seleciono a opção Blouses
 
 seleciono a opção Casual Dresses
     click element                            css=#block_top_menu > ul > li:nth-child(1) > ul > li:nth-child(2) > ul > li:nth-child(1) > a
+
+seleciono a opção Evening Dresses
+    click element                            css=#block_top_menu > ul > li:nth-child(1) > ul > li:nth-child(2) > ul > li:nth-child(2) > a
 
 aciono o link Contact us   
     click element                            xpath=//*[@id="contact-link"
