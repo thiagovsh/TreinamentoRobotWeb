@@ -6,11 +6,11 @@ Test Setup      Abrir navegador
 Test Teardown   Fechar navegador   
 
 *** Test Case ***
-TC05: Validar produtos T-Shirts na tela
-    [Tags]  TC05
+TC07: Validar produtos Casual Dresses na tela 
+    [Tags]  TC07
 
     Dado      que estou na tela Home
     E         passo o cursor sobre a opção Women
-    E         seleciono a opção T-shirts
-    Quando    estou na tela T-shirts - My Store
-    Então     verifico se os itens da tela T-shirts - My Store são femininos
+    Quando    seleciono a opção Casual Dresses
+    E         estou na tela Casual Dresses - My Store
+    Então     verifico se os itens da tela Casual Dresses - My Store são femininos

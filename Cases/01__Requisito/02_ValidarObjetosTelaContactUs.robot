@@ -9,7 +9,7 @@ Test Teardown   Fechar navegador
 TC02: Validar os objetos do formulario Customer Service - Contact Us
     [Tags]  TC02
 
-    Dado     que estou na tela home
-    Quando   aciono o link Contact us
-    E        que estou na tela Contact us
-    Então    valido os elementos do formulário Customer Service - Contact US
+    Dado      que estou na tela home
+    Quando    aciono o link Contact us
+    E         que estou na tela Contact us
+    Então     valido os elementos do formulário Customer Service - Contact US
