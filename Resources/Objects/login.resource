@@ -56,6 +56,11 @@ estou na tela T-shirts - My Store
     page should contain                      Catalog
     Title Should be                          T-shirts - My Store
 
+estou na tela Casual Dresses - My Store
+    wait until page contains element         css=#center_column > h1 > span.cat-name
+    page should contain                      Catalog
+    Title Should be                          Casual Dresses - My Store
+
 aciono o link Get Savings Now
     wait until Element is visible            xpath=//*[@id="header"]/div[1]
     click Element                            xpath=//*[@id="header"]/div[1]
@@ -71,13 +76,16 @@ clico na imagem Your Logo
     click element                            css=#header_logo > a > img
 
 passo o cursor sobre a opção Women    
-    mouse over                              css=#block_top_menu > ul > li:nth-child(1) > a
- 
+    mouse over                               css=#block_top_menu > ul > li:nth-child(1) > a
+    
 seleciono a opção T-shirts
     click element                            xpath=//*[@id="block_top_menu"]/ul/li[1]/ul/li[1]/ul/li[1]/a
 
 seleciono a opção Blouses
     click element                            css=#block_top_menu > ul > li:nth-child(1) > ul > li:nth-child(1) > ul > li:nth-child(2) > a
+
+seleciono a opção Casual Dresses
+    click element                            css=#block_top_menu > ul > li:nth-child(1) > ul > li:nth-child(2) > ul > li:nth-child(1) > a
 
 aciono o link Contact us   
     click element                            xpath=//*[@id="contact-link"
