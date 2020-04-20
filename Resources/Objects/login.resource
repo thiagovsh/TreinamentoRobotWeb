@@ -62,6 +62,7 @@ estou na tela Casual Dresses - My Store
     Title Should be                          Casual Dresses - My Store
 
 estou na tela Evening Dresses - My Store
+[Documentation] valida se estou na tela Evening Dresses
     wait until page contains element         css=#center_column > h1 > span.cat-name
     page should contain                      Catalog
     Title Should be                          Evening Dresses - My Store
