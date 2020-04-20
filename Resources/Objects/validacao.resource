@@ -1,9 +1,11 @@
 *** Settings ***
 library                                      SeleniumLibrary
+Resource                                     ../Resources/Objects/login.resource
 
 *** Variable ***
 ${URL}                                       http://automationpractice.com
 ${BROWSER}                                   chrome
+${T_SHIRTS_WOMEN}                            xpath=//*[@id="center_column"]//img
 
 *** Keywords ***
 será apresentada a tela Home
@@ -35,3 +37,7 @@ valido os elementos do formulário Authentication
     page should contain element              css=#login_form > div > div:nth-child(2) > label
     page should contain element              css=#login_form > div > p.lost_password
     page should contain element              css=#SubmitLogin
+
+verifico se os itens da tela T-shirts - My Store são femininos
+    page should contain element              xpath=//*[@id="center_column"]/ul/li/div/div[2]/h5//*[contains(text(), "T-shirts")]
+    capture element screenshot               xpath=//*[@id="center_column"]//img

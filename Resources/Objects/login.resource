@@ -4,6 +4,7 @@ library                                      SeleniumLibrary
 *** Variable ***
 ${URL}                                       http://automationpractice.com
 ${BROWSER}                                   chrome
+${LINK_WOMAN_HOME}                           css=#block_top_menu > ul > li:nth-child(1) > a
 
 *** Keywords ***
 Dado
@@ -25,6 +26,7 @@ E
 Abrir navegador
     [Documentation]  Abri o browser com a página em branco
     Open Browser                             about:blank     ${BROWSER}
+    maximize browser window
 
 Fechar navegador
     Close Browser
@@ -44,6 +46,12 @@ que estou na tela Contact us
     page should contain                      Customer service - Contact us
     Title Should be                          Contact us - My Store
 
+
+estou na tela T-shirts - My Store
+    wait until page contains element         css=#center_column > h1 > span.cat-name  5s 
+    page should contain                      Catalog
+    Title Should be                          T-shirts - My Store
+
 aciono o link Get Savings Now
     wait until Element is visible            xpath=//*[@id="header"]/div[1]
     click Element                            xpath=//*[@id="header"]/div[1]
@@ -58,5 +66,11 @@ clico na imagem Your Logo
     Title Should be                          My Store
     click element                            css=#header_logo > a > img
 
+passo o cursor sobre a opção Women    
+    mouse over                              css=#block_top_menu > ul > li:nth-child(1) > a
+ 
+seleciono a opção T-shirts
+    click element                            xpath=//*[@id="block_top_menu"]/ul/li[1]/ul/li[1]/ul/li[1]/a
+
 aciono o link Contact us   
-    click element                            xpath=//*[@id="contact-link"]
+    click element                            xpath=//*[@id="contact-link"
