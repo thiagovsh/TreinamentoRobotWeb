@@ -4,36 +4,73 @@ library                                      SeleniumLibrary
 *** Variable ***
 ${URL}                                       http://automationpractice.com
 ${BROWSER}                                   chrome
+${LINK_WOMAN_HOME}                           css=#block_top_menu > ul > li:nth-child(1) > a
 
 *** Keywords ***
+Dado
+    [Arguments]  ${KEYWORD}
+    Run Keyword  ${KEYWORD}
+
+Quando 
+    [Arguments]  ${KEYWORD}
+    Run Keyword  ${KEYWORD}
+
+Então
+    [Arguments]  ${KEYWORD}
+    Run Keyword  ${KEYWORD}
+
+E
+    [Arguments]  ${KEYWORD}
+    Run Keyword  ${KEYWORD}
+
 Abrir navegador
+    [Documentation]  Abri o browser com a página em branco
     Open Browser                             about:blank     ${BROWSER}
+    maximize browser window
 
 Fechar navegador
     Close Browser
 
 que estou na tela Home
+    [Documentation]  Direciona para a tela Home e confirma o nome da página
     Go To                                    http://automationpractice.com
     Title Should Be                          My Store
+
+que estou na tela Login - My Store 
+    [Documentation]  Aguarda a tela apresentar o elemento, e a página deve conter o elemento e título mencionado abaixo 
+    wait until page contains element         css=#center_column > h1  5s 
+    Title Should be                          Login - My Store
+
+que estou na tela Contact us
+    wait until page contains element         css=#uniform-id_contact  5s 
+    page should contain                      Customer service - Contact us
+    Title Should be                          Contact us - My Store
+
+
+estou na tela T-shirts - My Store
+    wait until page contains element         css=#center_column > h1 > span.cat-name  5s 
+    page should contain                      Catalog
+    Title Should be                          T-shirts - My Store
 
 aciono o link Get Savings Now
     wait until Element is visible            xpath=//*[@id="header"]/div[1]
     click Element                            xpath=//*[@id="header"]/div[1]
-    
-será apresentada a tela Home
-   Title Should Be                           My Store
 
-aciono o link Contact us
-    click element                            xpath=//*[@id="contact-link"]
+aciono o link Sign in
+    [Documentation]  Clica no elemento Sign in
+    click element                            css=#header div.header_user_info
 
-que estou na tela Contact us
-    page should contain                      Customer service - Contact us
-    Title Should be                          Contact us - My Store
+clico na imagem Your Logo
+    wait until page contains element         xpath=//*[@id="header"]/div[1]
+    wait until page contains element         css=#header div.header_user_info
+    Title Should be                          My Store
+    click element                            css=#header_logo > a > img
 
-valido os elementos do formulário Customer Service - Contact US
-    page should contain                      send a message
-    page should contain                      Subject Heading
-  
+passo o cursor sobre a opção Women    
+    mouse over                              css=#block_top_menu > ul > li:nth-child(1) > a
+ 
+seleciono a opção T-shirts
+    click element                            xpath=//*[@id="block_top_menu"]/ul/li[1]/ul/li[1]/ul/li[1]/a
 
-    #wait until element is visible            ="logo img-responsive" src="http://automationpractice.com/img/logo.jpg" alt="My Store" width="350" height="99">
-    
+aciono o link Contact us   
+    click element                            xpath=//*[@id="contact-link"
