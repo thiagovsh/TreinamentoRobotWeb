@@ -13,4 +13,4 @@ TC08: Validar produtos Evening Dresses na tela
     E         passo o cursor sobre a opção Women
     Quando    seleciono a opção Evening Dresses
     E         estou na tela Evening Dresses - My Store
-    Então     verifico se os itens da tela Casual Dresses - My Store são femininos
+    Então     verifico se os itens da tela Evening Dresses - My Store são femininos
