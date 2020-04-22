@@ -6,13 +6,13 @@ Test Setup      Abrir navegador
 Test Teardown   Fechar Browser
 
 *** Test Case ***
-TC10: Validar os produtos listados na tela Casual Dresses
-    [Tags]  TC10
+TC11: Validar os produtos listados na tela Evening Dresses
+    [Tags]  TC11  req01  home_dresses
 
     Dado      que estou na tela Home
-    Quando    seleciono a opção Dresses - Casual Dresses
-    E         estou na tela Dresses Casual Dresses - Catalog
-    Então     verifico se os itens da tela Dresses - Casual Dresses - My Store são femininos
+    Quando    seleciono a opção Dresses - Evening Dresses
+    E         estou na tela Dresses Evening Dresses - Catalog
+    Então     verifico se os itens da tela Dresses - Evening Dresses - My Store são femininos
 
 *** Keywords ***
 Fechar Browser
@@ -25,7 +25,3 @@ Test NOK
 
 Test OK
     Fechar navegador
-
-
-
-

@@ -3,17 +3,16 @@ Resource        ../Resources/Objects/login.resource
 Resource        ../Resources/Objects/validacao.resource
 
 Test Setup      Abrir navegador
-Test Teardown   Fechar Browser  
+Test Teardown   Fechar Browser
 
 *** Test Case ***
-TC06: Validar produtos Blouses na tela 
-    [Tags]  TC06  req01  home_women
+TC10: Validar os produtos listados na tela Casual Dresses
+    [Tags]  TC10  req01  home_dresses
 
     Dado      que estou na tela Home
-    E         passo o cursor sobre a opção Women
-    Quando    seleciono a opção Blouses
-    E         estou na tela Blouses - My Store
-    Então     verifico se os itens da tela Blouses - My Store são femininos
+    Quando    seleciono a opção Dresses - Casual Dresses
+    E         estou na tela Dresses Casual Dresses - Catalog
+    Então     verifico se os itens da tela Dresses - Casual Dresses - My Store são femininos
 
 *** Keywords ***
 Fechar Browser
@@ -26,3 +25,7 @@ Test NOK
 
 Test OK
     Fechar navegador
+
+
+
+
