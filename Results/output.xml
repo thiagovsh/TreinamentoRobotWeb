@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.2 (Python 3.8.2 on win32)" generated="20200421 17:50:53.388" rpa="false">
+<robot generator="Robot 3.1.2 (Python 3.8.2 on win32)" generated="20200422 13:54:06.787" rpa="false">
 <suite id="s1" name="Requisito" source="C:\treinamento\Cases\01__Requisito">
-<suite id="s1-s1" name="08 ValidarProdutosEveningDressesFemininas" source="C:\treinamento\Cases\01__Requisito\08_ValidarProdutosEveningDressesFemininas.robot">
-<test id="s1-s1-t1" name="TC08: Validar produtos Evening Dresses na tela">
+<suite id="s1-s1" name="10 ValidarProdutosCasualDressesFemininas" source="C:\treinamento\Cases\01__Requisito\10_ValidarProdutosCasualDressesFemininas.robot">
+<test id="s1-s1-t1" name="TC10: Validar os produtos listados na tela Casual Dresses">
 <kw name="Abrir navegador" library="login" type="setup">
 <doc>Abri o browser com a página em branco</doc>
 <kw name="Open Browser" library="SeleniumLibrary">
@@ -11,14 +11,14 @@
 <arg>about:blank</arg>
 <arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20200421 17:50:53.642" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20200421 17:50:53.642" endtime="20200421 17:50:59.293"></status>
+<msg timestamp="20200422 13:54:07.093" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20200422 13:54:07.093" endtime="20200422 13:54:12.370"></status>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20200421 17:50:59.293" endtime="20200421 17:51:03.444"></status>
+<status status="PASS" starttime="20200422 13:54:12.370" endtime="20200422 13:54:16.496"></status>
 </kw>
-<status status="PASS" starttime="20200421 17:50:53.641" endtime="20200421 17:51:03.444"></status>
+<status status="PASS" starttime="20200422 13:54:07.092" endtime="20200422 13:54:16.496"></status>
 </kw>
 <kw name="Dado" library="login">
 <arguments>
@@ -36,166 +36,173 @@
 <arguments>
 <arg>http://automationpractice.com</arg>
 </arguments>
-<msg timestamp="20200421 17:51:03.451" level="INFO">Opening url 'http://automationpractice.com'</msg>
-<status status="PASS" starttime="20200421 17:51:03.451" endtime="20200421 17:51:09.068"></status>
+<msg timestamp="20200422 13:54:16.498" level="INFO">Opening url 'http://automationpractice.com'</msg>
+<status status="PASS" starttime="20200422 13:54:16.498" endtime="20200422 13:54:21.668"></status>
 </kw>
 <kw name="Title Should Be" library="SeleniumLibrary">
 <doc>Verifies that the current page title equals ``title``.</doc>
 <arguments>
 <arg>My Store</arg>
 </arguments>
-<msg timestamp="20200421 17:51:09.074" level="INFO">Page title is 'My Store'.</msg>
-<status status="PASS" starttime="20200421 17:51:09.068" endtime="20200421 17:51:09.074"></status>
+<msg timestamp="20200422 13:54:21.675" level="INFO">Page title is 'My Store'.</msg>
+<status status="PASS" starttime="20200422 13:54:21.668" endtime="20200422 13:54:21.675"></status>
 </kw>
-<status status="PASS" starttime="20200421 17:51:03.451" endtime="20200421 17:51:09.075"></status>
+<status status="PASS" starttime="20200422 13:54:16.498" endtime="20200422 13:54:21.675"></status>
 </kw>
-<status status="PASS" starttime="20200421 17:51:03.451" endtime="20200421 17:51:09.075"></status>
+<status status="PASS" starttime="20200422 13:54:16.497" endtime="20200422 13:54:21.675"></status>
 </kw>
-<status status="PASS" starttime="20200421 17:51:03.451" endtime="20200421 17:51:09.075"></status>
-</kw>
-<kw name="E" library="login">
-<arguments>
-<arg>passo o cursor sobre a opção Women</arg>
-</arguments>
-<kw name="Run Keyword" library="BuiltIn">
-<doc>Executes the given keyword with the given arguments.</doc>
-<arguments>
-<arg>${KEYWORD}</arg>
-</arguments>
-<kw name="passo o cursor sobre a opção Women" library="login">
-<kw name="Mouse Over" library="SeleniumLibrary">
-<doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<arguments>
-<arg>css=#block_top_menu &gt; ul &gt; li:nth-child(1) &gt; a</arg>
-</arguments>
-<msg timestamp="20200421 17:51:09.077" level="INFO">Simulating Mouse Over on element 'css=#block_top_menu &gt; ul &gt; li:nth-child(1) &gt; a'.</msg>
-<status status="PASS" starttime="20200421 17:51:09.077" endtime="20200421 17:51:09.372"></status>
-</kw>
-<status status="PASS" starttime="20200421 17:51:09.076" endtime="20200421 17:51:09.372"></status>
-</kw>
-<status status="PASS" starttime="20200421 17:51:09.076" endtime="20200421 17:51:09.372"></status>
-</kw>
-<status status="PASS" starttime="20200421 17:51:09.075" endtime="20200421 17:51:09.372"></status>
+<status status="PASS" starttime="20200422 13:54:16.497" endtime="20200422 13:54:21.676"></status>
 </kw>
 <kw name="Quando" library="login">
 <arguments>
-<arg>seleciono a opção Evening Dresses</arg>
+<arg>seleciono a opção Dresses - Casual Dresses</arg>
 </arguments>
 <kw name="Run Keyword" library="BuiltIn">
 <doc>Executes the given keyword with the given arguments.</doc>
 <arguments>
 <arg>${KEYWORD}</arg>
 </arguments>
-<kw name="seleciono a opção Evening Dresses" library="login">
+<kw name="seleciono a opção Dresses - Casual Dresses" library="login">
+<kw name="passo o cursor sobre a opção Dresses" library="login">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>css=#block_top_menu &gt; ul &gt; li:nth-child(2) &gt; a</arg>
+</arguments>
+<msg timestamp="20200422 13:54:21.678" level="INFO">Simulating Mouse Over on element 'css=#block_top_menu &gt; ul &gt; li:nth-child(2) &gt; a'.</msg>
+<status status="PASS" starttime="20200422 13:54:21.678" endtime="20200422 13:54:21.974"></status>
+</kw>
+<status status="PASS" starttime="20200422 13:54:21.677" endtime="20200422 13:54:21.975"></status>
+</kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
-<arg>css=#block_top_menu &gt; ul &gt; li:nth-child(1) &gt; ul &gt; li:nth-child(2) &gt; ul &gt; li:nth-child(2) &gt; a</arg>
+<arg>css=#block_top_menu &gt; ul &gt; li:nth-child(2) &gt; ul &gt; li:nth-child(1) &gt; a</arg>
 </arguments>
-<msg timestamp="20200421 17:51:09.374" level="INFO">Clicking element 'css=#block_top_menu &gt; ul &gt; li:nth-child(1) &gt; ul &gt; li:nth-child(2) &gt; ul &gt; li:nth-child(2) &gt; a'.</msg>
-<status status="PASS" starttime="20200421 17:51:09.374" endtime="20200421 17:51:11.370"></status>
+<msg timestamp="20200422 13:54:21.975" level="INFO">Clicking element 'css=#block_top_menu &gt; ul &gt; li:nth-child(2) &gt; ul &gt; li:nth-child(1) &gt; a'.</msg>
+<status status="PASS" starttime="20200422 13:54:21.975" endtime="20200422 13:54:24.541"></status>
 </kw>
-<status status="PASS" starttime="20200421 17:51:09.373" endtime="20200421 17:51:11.371"></status>
+<status status="PASS" starttime="20200422 13:54:21.677" endtime="20200422 13:54:24.541"></status>
 </kw>
-<status status="PASS" starttime="20200421 17:51:09.373" endtime="20200421 17:51:11.372"></status>
+<status status="PASS" starttime="20200422 13:54:21.677" endtime="20200422 13:54:24.542"></status>
 </kw>
-<status status="PASS" starttime="20200421 17:51:09.373" endtime="20200421 17:51:11.373"></status>
+<status status="PASS" starttime="20200422 13:54:21.676" endtime="20200422 13:54:24.542"></status>
 </kw>
 <kw name="E" library="login">
 <arguments>
-<arg>estou na tela Evening Dresses - My Store</arg>
+<arg>estou na tela Dresses Casual Dresses - Catalog</arg>
 </arguments>
 <kw name="Run Keyword" library="BuiltIn">
 <doc>Executes the given keyword with the given arguments.</doc>
 <arguments>
 <arg>${KEYWORD}</arg>
 </arguments>
-<kw name="estou na tela Evening Dresses - My Store" library="login">
-<doc>valida se estou na tela Evening Dresses</doc>
+<kw name="estou na tela Dresses Casual Dresses - Catalog" library="login">
+<doc>valida se estou na tela Summer Dresses</doc>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
 <arguments>
 <arg>css=#center_column &gt; h1 &gt; span.cat-name</arg>
 </arguments>
-<status status="PASS" starttime="20200421 17:51:11.378" endtime="20200421 17:51:11.402"></status>
+<status status="PASS" starttime="20200422 13:54:24.544" endtime="20200422 13:54:24.567"></status>
 </kw>
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <doc>Verifies that current page contains ``text``.</doc>
 <arguments>
 <arg>Catalog</arg>
 </arguments>
-<msg timestamp="20200421 17:51:11.423" level="INFO">Current page contains text 'Catalog'.</msg>
-<status status="PASS" starttime="20200421 17:51:11.402" endtime="20200421 17:51:11.423"></status>
+<msg timestamp="20200422 13:54:24.593" level="INFO">Current page contains text 'Catalog'.</msg>
+<status status="PASS" starttime="20200422 13:54:24.567" endtime="20200422 13:54:24.594"></status>
 </kw>
 <kw name="Title Should Be" library="SeleniumLibrary">
 <doc>Verifies that the current page title equals ``title``.</doc>
 <arguments>
-<arg>Evening Dresses - My Store</arg>
+<arg>Casual Dresses - My Store</arg>
 </arguments>
-<msg timestamp="20200421 17:51:11.428" level="INFO">Page title is 'Evening Dresses - My Store'.</msg>
-<status status="PASS" starttime="20200421 17:51:11.424" endtime="20200421 17:51:11.428"></status>
+<msg timestamp="20200422 13:54:24.599" level="INFO">Page title is 'Casual Dresses - My Store'.</msg>
+<status status="PASS" starttime="20200422 13:54:24.594" endtime="20200422 13:54:24.599"></status>
 </kw>
-<status status="PASS" starttime="20200421 17:51:11.378" endtime="20200421 17:51:11.428"></status>
+<status status="PASS" starttime="20200422 13:54:24.543" endtime="20200422 13:54:24.599"></status>
 </kw>
-<status status="PASS" starttime="20200421 17:51:11.376" endtime="20200421 17:51:11.428"></status>
+<status status="PASS" starttime="20200422 13:54:24.543" endtime="20200422 13:54:24.599"></status>
 </kw>
-<status status="PASS" starttime="20200421 17:51:11.375" endtime="20200421 17:51:11.429"></status>
+<status status="PASS" starttime="20200422 13:54:24.542" endtime="20200422 13:54:24.599"></status>
 </kw>
 <kw name="Então" library="login">
 <arguments>
-<arg>verifico se os itens da tela Evening Dresses - My Store são femininos</arg>
+<arg>verifico se os itens da tela Dresses - Casual Dresses - My Store são femininos</arg>
 </arguments>
 <kw name="Run Keyword" library="BuiltIn">
 <doc>Executes the given keyword with the given arguments.</doc>
 <arguments>
 <arg>${KEYWORD}</arg>
 </arguments>
-<kw name="verifico se os itens da tela Evening Dresses - My Store são femininos" library="validacao">
+<kw name="verifico se os itens da tela Dresses - Casual Dresses - My Store são femininos" library="validacao">
 <kw name="Page Should Contain Element" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
 <arguments>
 <arg>css=#center_column &gt; ul &gt; li &gt; div &gt; div.right-block &gt; h5 &gt; a</arg>
 </arguments>
-<msg timestamp="20200421 17:51:11.441" level="INFO">Current page contains element 'css=#center_column &gt; ul &gt; li &gt; div &gt; div.right-block &gt; h5 &gt; a'.</msg>
-<status status="PASS" starttime="20200421 17:51:11.431" endtime="20200421 17:51:11.441"></status>
+<msg timestamp="20200422 13:54:24.617" level="INFO">Current page contains element 'css=#center_column &gt; ul &gt; li &gt; div &gt; div.right-block &gt; h5 &gt; a'.</msg>
+<status status="PASS" starttime="20200422 13:54:24.601" endtime="20200422 13:54:24.617"></status>
 </kw>
 <kw name="Page Should Contain Element" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
 <arguments>
 <arg>css=#center_column &gt; div.content_sortPagiBar.clearfix &gt; div.top-pagination-content.clearfix &gt; div.product-count</arg>
 </arguments>
-<msg timestamp="20200421 17:51:11.452" level="INFO">Current page contains element 'css=#center_column &gt; div.content_sortPagiBar.clearfix &gt; div.top-pagination-content.clearfix &gt; div.product-count'.</msg>
-<status status="PASS" starttime="20200421 17:51:11.441" endtime="20200421 17:51:11.453"></status>
+<msg timestamp="20200422 13:54:24.630" level="INFO">Current page contains element 'css=#center_column &gt; div.content_sortPagiBar.clearfix &gt; div.top-pagination-content.clearfix &gt; div.product-count'.</msg>
+<status status="PASS" starttime="20200422 13:54:24.617" endtime="20200422 13:54:24.630"></status>
 </kw>
 <kw name="Capture Element Screenshot" library="SeleniumLibrary">
 <doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
 <arguments>
 <arg>xpath=//*[@id="center_column"]/ul/li/div/div[1]/div/a[1]/img</arg>
 </arguments>
-<msg timestamp="20200421 17:51:11.818" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-5.png"&gt;&lt;img src="selenium-element-screenshot-5.png" width="400px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20200421 17:51:11.453" endtime="20200421 17:51:11.818"></status>
+<msg timestamp="20200422 13:54:25.019" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-10.png"&gt;&lt;img src="selenium-element-screenshot-10.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200422 13:54:24.630" endtime="20200422 13:54:25.019"></status>
 </kw>
-<status status="PASS" starttime="20200421 17:51:11.430" endtime="20200421 17:51:11.818"></status>
+<status status="PASS" starttime="20200422 13:54:24.601" endtime="20200422 13:54:25.019"></status>
 </kw>
-<status status="PASS" starttime="20200421 17:51:11.430" endtime="20200421 17:51:11.818"></status>
+<status status="PASS" starttime="20200422 13:54:24.600" endtime="20200422 13:54:25.019"></status>
 </kw>
-<status status="PASS" starttime="20200421 17:51:11.429" endtime="20200421 17:51:11.819"></status>
+<status status="PASS" starttime="20200422 13:54:24.600" endtime="20200422 13:54:25.019"></status>
 </kw>
-<kw name="Fechar navegador" library="login" type="teardown">
+<kw name="Fechar Browser" type="teardown">
+<kw name="Run Keyword If Test Failed" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<arguments>
+<arg>Test NOK</arg>
+</arguments>
+<status status="PASS" starttime="20200422 13:54:25.024" endtime="20200422 13:54:25.024"></status>
+</kw>
+<kw name="Run Keyword If Test Passed" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if the test passed.</doc>
+<arguments>
+<arg>Test OK</arg>
+</arguments>
+<kw name="Test OK">
+<kw name="Fechar navegador" library="login">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20200421 17:51:11.820" endtime="20200421 17:51:14.092"></status>
+<status status="PASS" starttime="20200422 13:54:25.026" endtime="20200422 13:54:27.633"></status>
 </kw>
-<status status="PASS" starttime="20200421 17:51:11.819" endtime="20200421 17:51:14.092"></status>
+<status status="PASS" starttime="20200422 13:54:25.025" endtime="20200422 13:54:27.633"></status>
+</kw>
+<status status="PASS" starttime="20200422 13:54:25.025" endtime="20200422 13:54:27.633"></status>
+</kw>
+<status status="PASS" starttime="20200422 13:54:25.025" endtime="20200422 13:54:27.633"></status>
+</kw>
+<status status="PASS" starttime="20200422 13:54:25.023" endtime="20200422 13:54:27.633"></status>
 </kw>
 <tags>
-<tag>TC08</tag>
+<tag>TC10</tag>
 </tags>
-<status status="PASS" starttime="20200421 17:50:53.640" endtime="20200421 17:51:14.092" critical="yes"></status>
+<status status="PASS" starttime="20200422 13:54:07.091" endtime="20200422 13:54:27.634" critical="yes"></status>
 </test>
-<status status="PASS" starttime="20200421 17:50:53.431" endtime="20200421 17:51:14.106"></status>
+<status status="PASS" starttime="20200422 13:54:06.831" endtime="20200422 13:54:27.636"></status>
 </suite>
-<status status="PASS" starttime="20200421 17:50:53.404" endtime="20200421 17:51:14.128"></status>
+<status status="PASS" starttime="20200422 13:54:06.790" endtime="20200422 13:54:27.648"></status>
 </suite>
 <statistics>
 <total>
@@ -203,11 +210,11 @@
 <stat pass="1" fail="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0">TC08</stat>
+<stat pass="1" fail="0">TC10</stat>
 </tag>
 <suite>
 <stat pass="1" fail="0" id="s1" name="Requisito">Requisito</stat>
-<stat pass="1" fail="0" id="s1-s1" name="08 ValidarProdutosEveningDressesFemininas">Requisito.08 ValidarProdutosEveningDressesFemininas</stat>
+<stat pass="1" fail="0" id="s1-s1" name="10 ValidarProdutosCasualDressesFemininas">Requisito.10 ValidarProdutosCasualDressesFemininas</stat>
 </suite>
 </statistics>
 <errors>
