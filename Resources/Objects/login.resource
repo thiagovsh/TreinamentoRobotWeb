@@ -92,8 +92,14 @@ estou na tela Dresses Evening Dresses - Catalog
     wait until page contains element    css=#center_column > h1 > span.cat-name
     page should contain                 Catalog
     Title Should be                     Evening Dresses - My Store
-  
 
+estou na tela Dresses Summer Dresses - Catalog
+    [Documentation]       valida se estou na tela Summer Dresses, espero a tela ser apresentada  ...
+    ...                   verifico se está sendo apresentado o Catalog, verifico o título
+    wait until page contains element    css=#center_column > h1 > span.cat-name
+    page should contain                 Catalog
+    Title Should be                     Summer Dresses - My Store
+  
 aciono o link Get Savings Now
     wait until Element is visible       xpath=//*[@id="header"]/div[1]
     click Element                       xpath=//*[@id="header"]/div[1]
@@ -153,6 +159,15 @@ seleciono a opção Dresses - Evening Dresses
 
     passo o cursor sobre a opção Dresses
     click element                       css=#block_top_menu > ul > li:nth-child(2) > ul > li:nth-child(2) > a
+
+seleciono a opção Dresses - Summer Dresses
+    [Documentation]  move o mouse até a opção Dresses sem clicar apresentando as opções que posso clicar, ...
+    ...  e clico na opção Summer Dresses
+
+    passo o cursor sobre a opção Dresses
+    click element                       css=#block_top_menu > ul > li:nth-child(2) > ul > li:nth-child(3) > a
+
+
 
 
 
