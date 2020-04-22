@@ -74,6 +74,13 @@ estou na tela Summer Dresses - My Store
     Title Should be                     Summer Dresses - My Store
     page should contain element         css=#center_column > h1 > span.cat-name
 
+estou na tela Dresses Casual Dresses - Catalog
+    [Documentation]       valida se estou na tela Summer Dresses
+    wait until page contains element    css=#center_column > h1 > span.cat-name
+    page should contain                 Catalog
+    Title Should be                     Casual Dresses - My Store
+  
+
 aciono o link Get Savings Now
     wait until Element is visible       xpath=//*[@id="header"]/div[1]
     click Element                       xpath=//*[@id="header"]/div[1]
@@ -81,6 +88,9 @@ aciono o link Get Savings Now
 aciono o link Sign in
     [Documentation]                     Clica no elemento Sign in
     click element                       css=#header div.header_user_info
+
+aciono o link Contact us
+    click element                       xpath=//*[@id="contact-link"
 
 clico na imagem Your Logo
     wait until page contains element    xpath=//*[@id="header"]/div[1]
@@ -90,6 +100,9 @@ clico na imagem Your Logo
 
 passo o cursor sobre a opção Women
     mouse over                          css=#block_top_menu > ul > li:nth-child(1) > a
+
+passo o cursor sobre a opção Dresses
+    mouse over                         css=#block_top_menu > ul > li:nth-child(2) > a
 
 seleciono a opção T-shirts
     click element                       xpath=//*[@id="block_top_menu"]/ul/li[1]/ul/li[1]/ul/li[1]/a
@@ -106,5 +119,9 @@ seleciono a opção Evening Dresses
 seleciono a opção Summer Dresses
     click element                       css=#block_top_menu > ul > li:nth-child(1) > ul > li:nth-child(2) > ul > li:nth-child(3) > a
 
-aciono o link Contact us
-    click element                       xpath=//*[@id="contact-link"
+seleciono a opção Dresses - Casual Dresses
+    passo o cursor sobre a opção Dresses
+    click element                       css=#block_top_menu > ul > li:nth-child(2) > ul > li:nth-child(1) > a
+
+
+

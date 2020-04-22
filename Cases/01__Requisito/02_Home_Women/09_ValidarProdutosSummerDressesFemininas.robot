@@ -3,7 +3,7 @@ Resource        ../Resources/Objects/login.resource
 Resource        ../Resources/Objects/validacao.resource
 
 Test Setup      Abrir navegador
-Test Teardown   #Fechar navegador   
+Test Teardown   Fechar navegador
 
 *** Test Case ***
 TC09: Validar produtos Summer Dresses na tela 
