@@ -9,8 +9,9 @@ ${T_SHIRTS_WOMEN}                            xpath=//*[@id="center_column"]//img
 
 *** Keywords ***
 será apresentada a tela Home
-[Documentation] Valida se estou na tela home do site
-   Title Should Be                           My Store
+    [Documentation]  Valida se estou na tela home do site
+    wait until Element is visible             xpath=//*[@id="header"]/div[1]
+    Title Should Be                           My Store
 
 valido os elementos do formulário Customer Service - Contact US
     page should contain                      send a message
@@ -64,6 +65,11 @@ verifico se os itens da tela Summer Dresses - My Store são femininos
     capture element screenshot               xpath=//*[@id="center_column"]/ul/li/div/div[1]/div/a[1]/img
 
 verifico se os itens da tela Dresses - Casual Dresses - My Store são femininos
+    page should contain element              css=#center_column > ul > li > div > div.right-block > h5 > a
+    page should contain element              css=#center_column > div.content_sortPagiBar.clearfix > div.top-pagination-content.clearfix > div.product-count
+    capture element screenshot               xpath=//*[@id="center_column"]/ul/li/div/div[1]/div/a[1]/img
+
+verifico se os itens da tela Dresses - Evening Dresses - My Store são femininos
     page should contain element              css=#center_column > ul > li > div > div.right-block > h5 > a
     page should contain element              css=#center_column > div.content_sortPagiBar.clearfix > div.top-pagination-content.clearfix > div.product-count
     capture element screenshot               xpath=//*[@id="center_column"]/ul/li/div/div[1]/div/a[1]/img
