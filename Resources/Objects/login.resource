@@ -167,7 +167,9 @@ seleciono a opção Dresses - Summer Dresses
     passo o cursor sobre a opção Dresses
     click element                       css=#block_top_menu > ul > li:nth-child(2) > ul > li:nth-child(3) > a
 
-
+seleciono a opção T-Shirts - T-Shirts
+    [Documentation]  clico na opção T-shirts
+    click element                       xpath=//*[@id="block_top_menu"]/ul/li[3]/a
 
 
 
