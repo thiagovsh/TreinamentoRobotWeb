@@ -88,3 +88,8 @@ verifico se os itens da tela Dresses - Summer Dresses - My Store são femininos
     capture element screenshot               xpath=//*[@id="center_column"]/ul/li[2]/div/div[1]/div/a[1]/img
     page should contain element              css=#center_column > ul > li.ajax_block_product.col-xs-12.col-sm-6.col-md-4.last-in-line.last-line.first-item-of-tablet-line.last-item-of-mobile-line.last-mobile-line > div > div.right-block > h5 > a
     capture element screenshot               xpath=//*[@id="center_column"]/ul/li[3]/div/div[1]/div/a[1]/img
+
+verifico se os itens da tela TShirts - My Store são femininos
+    page should contain element              css=#center_column > div.content_sortPagiBar.clearfix > div.top-pagination-content.clearfix > div.product-count
+    page should contain element              css=#center_column > ul > li > div > div.right-block > h5 > a
+    capture element screenshot               xpath=//*[@id="center_column"]/ul/li/div/div[1]/div/a[1]/img
