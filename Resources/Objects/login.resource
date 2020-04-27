@@ -6,7 +6,19 @@ ${URL}                http://automationpractice.com
 ${BROWSER}            chrome
 ${LINK_WOMAN_HOME}    css=#block_top_menu > ul > li:nth-child(1) > a
 
+@{SORT_BY}            css=#selectProductSort > option:nth-child(0)  css=#selectProductSort > option:nth-child(1)  css=#selectProductSort > option:nth-child(2)  css=#selectProductSort > option:nth-child(3)
+                #  ...  css=#selectProductSort > option:nth-child(5)  ...
+                #  ...  css=#selectProductSort > option:nth-child(6)  ...
+                #  ...  css=#selectProductSort > option:nth-child(7)  ...
+                #  ...  css=#selectProductSort > option:nth-child(8)  
+
 *** Keywords ***
+seleciono o filtro Sort By
+    [Documentation]  Clico no filtro com as opções
+    mouse over                         css=#uniform-selectProductSort
+    click element                      css=#uniform-selectProductSort
+    click element                      ${SORT_BY[2]}  
+
 Dado
     [Documentation]  Keyword para ser utilizada no BDD
     [Arguments]                         ${KEYWORD}
@@ -67,35 +79,35 @@ estou na tela Casual Dresses - My Store
     Title Should be                     Casual Dresses - My Store
 
 estou na tela Evening Dresses - My Store
-    [Documentation]       valida se estou na tela Evening Dresses
+    [Documentation]  valida se estou na tela Evening Dresses
     wait until page contains element    css=#center_column > h1 > span.cat-name
     page should contain                 Catalog
     Title Should be                     Evening Dresses - My Store
 
 estou na tela Summer Dresses - My Store
-    [Documentation]       valida se estou na tela Summer Dresses
+    [Documentation]  valida se estou na tela Summer Dresses
     wait until page contains element    css=#center_column > div.content_scene_cat > div
     page should contain                 Catalog
     Title Should be                     Summer Dresses - My Store
     page should contain element         css=#center_column > h1 > span.cat-name
 
 estou na tela Dresses Casual Dresses - Catalog
-    [Documentation]       valida se estou na tela Casual Dresses, espero a tela ser apresentada  ...
-    ...                   verifico se está sendo apresentado o Catalog, verifico o título
+    [Documentation]  valida se estou na tela Casual Dresses, espero a tela ser apresentada  ...
+    ...              verifico se está sendo apresentado o Catalog, verifico o título
     wait until page contains element    css=#center_column > h1 > span.cat-name
     page should contain                 Catalog
     Title Should be                     Casual Dresses - My Store
 
 estou na tela Dresses Evening Dresses - Catalog
-    [Documentation]       valida se estou na tela Evening Dresses, espero a tela ser apresentada  ...
-    ...                   verifico se está sendo apresentado o Catalog, verifico o título
+    [Documentation]  valida se estou na tela Evening Dresses, espero a tela ser apresentada  ...
+    ...              verifico se está sendo apresentado o Catalog, verifico o título
     wait until page contains element    css=#center_column > h1 > span.cat-name
     page should contain                 Catalog
     Title Should be                     Evening Dresses - My Store
 
 estou na tela Dresses Summer Dresses - Catalog
-    [Documentation]       valida se estou na tela Summer Dresses, espero a tela ser apresentada  ...
-    ...                   verifico se está sendo apresentado o Catalog, verifico o título
+    [Documentation]  valida se estou na tela Summer Dresses, espero a tela ser apresentada  ...
+    ...              verifico se está sendo apresentado o Catalog, verifico o título
     wait until page contains element    css=#center_column > h1 > span.cat-name
     page should contain                 Catalog
     Title Should be                     Summer Dresses - My Store
@@ -170,6 +182,12 @@ seleciono a opção Dresses - Summer Dresses
 seleciono a opção T-Shirts - T-Shirts
     [Documentation]  clico na opção T-shirts
     click element                       xpath=//*[@id="block_top_menu"]/ul/li[3]/a
+
+
+
+
+
+    
 
 
 
