@@ -6,6 +6,10 @@ Resource                                     ../Resources/Objects/login.resource
 ${URL}                                       http://automationpractice.com
 ${BROWSER}                                   chrome
 ${T_SHIRTS_WOMEN}                            xpath=//*[@id="center_column"]//img
+${PRIMEIRO_ITEM}                             css=#center_column > ul > li.ajax_block_product.col-xs-12.col-sm-6.col-md-4.first-in-line.first-item-of-tablet-line.first-item-of-mobile-line
+${PRODUTO_1}                                 css=#center_column > ul > li.ajax_block_product.col-xs-12.col-sm-6.col-md-4.first-in-line.last-line.first-item-of-tablet-line.first-item-of-mobile-line.last-mobile-line
+${PRODUTO_2}                                 css=#center_column > ul > li.ajax_block_product.col-xs-12.col-sm-6.col-md-4.last-line.last-item-of-tablet-line.last-mobile-line
+${PRODUTO_3}                                 css=#center_column > ul > li.ajax_block_product.col-xs-12.col-sm-6.col-md-4.last-in-line.last-line.first-item-of-tablet-line.last-item-of-mobile-line.last-mobile-line
 
 *** Keywords ***
 será apresentada a tela Home
@@ -93,3 +97,9 @@ verifico se os itens da tela TShirts - My Store são femininos
     page should contain element              css=#center_column > div.content_sortPagiBar.clearfix > div.top-pagination-content.clearfix > div.product-count
     page should contain element              css=#center_column > ul > li > div > div.right-block > h5 > a
     capture element screenshot               xpath=//*[@id="center_column"]/ul/li/div/div[1]/div/a[1]/img
+
+será apresentada a tela com os produtos ordenados de forma crescente
+    element should not be visible            css=#center_column > ul > p > img
+    page should contain element              ${PRIMEIRO_ITEM}
+    run Keywords if                          ${PRIMEIRO_ITEM} = ${PRODUTO_3}
+    
