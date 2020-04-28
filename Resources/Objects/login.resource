@@ -13,12 +13,6 @@ ${LINK_WOMAN_HOME}    css=#block_top_menu > ul > li:nth-child(1) > a
                 #  ...  css=#selectProductSort > option:nth-child(8)  
 
 *** Keywords ***
-seleciono o filtro Sort By
-    [Documentation]  Clico no filtro com as opções
-    mouse over                         css=#uniform-selectProductSort
-    click element                      css=#uniform-selectProductSort
-    click element                      ${SORT_BY[2]}  
-
 Dado
     [Documentation]  Keyword para ser utilizada no BDD
     [Arguments]                         ${KEYWORD}
@@ -182,6 +176,31 @@ seleciono a opção Dresses - Summer Dresses
 seleciono a opção T-Shirts - T-Shirts
     [Documentation]  clico na opção T-shirts
     click element                       xpath=//*[@id="block_top_menu"]/ul/li[3]/a
+
+seleciono o filtro Sort By
+    [Documentation]  Clico no filtro com as opções
+    mouse over                         css=#uniform-selectProductSort
+    click element                      css=#uniform-selectProductSort
+    click element                      ${SORT_BY[2]} 
+
+
+seleciono o filtro por Grid
+    [Documentation]  Seleciono o filtro de ordenação de apresentração por Grid
+
+a opção List foi selecionada
+    [Documentation]  opção list deve ser selecionada
+    wait until page contains element   css=#list > a > i
+    click element                      css=#list > a > i
+
+seleciono a opção Grid
+    [Documentation]  seleciono o modo de exibição por Grid
+    wait until page contains element   css=#grid > a > i
+    click element                      css=#grid > a > i
+    
+    
+
+
+
 
 
 
