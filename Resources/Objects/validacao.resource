@@ -107,4 +107,9 @@ será apresentado os produtos no formato de Grid
     page should contain element             css=#grid > a > i
     page should contain element             css=#center_column > ul
 
+será apresentado os produtos no formato de List
+    wait until element is visible                 css=#center_column > ul > li.ajax_block_product.first-in-line.last-line.first-item-of-tablet-line.first-item-of-mobile-line.last-mobile-line.col-xs-12
+    page should contain element             css=#list > a
+    page should contain element             css=#center_column > ul
     
+
