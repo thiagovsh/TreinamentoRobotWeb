@@ -184,9 +184,10 @@ seleciono o filtro Sort By
     click element                      ${SORT_BY[2]} 
 
 
-seleciono o filtro por Grid
-    [Documentation]  Seleciono o filtro de ordenação de apresentração por Grid
-
+seleciono a opção List
+    [Documentation]  opção list deve ser selecionada
+    a opção List foi selecionada
+   
 a opção List foi selecionada
     [Documentation]  opção list deve ser selecionada
     wait until page contains element   css=#list > a > i
