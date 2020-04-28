@@ -102,4 +102,9 @@ será apresentada a tela com os produtos ordenados de forma crescente
     element should not be visible            css=#center_column > ul > p > img
     page should contain element              ${PRIMEIRO_ITEM}
     run Keywords if                          ${PRIMEIRO_ITEM} = ${PRODUTO_3}
+
+será apresentado os produtos no formato de Grid
+    page should contain element             css=#grid > a > i
+    page should contain element             css=#center_column > ul
+
     
